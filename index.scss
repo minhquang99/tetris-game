@@ -1,0 +1,100 @@
+/* ------------------ FONT --------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+/* ------------------ MIXIN --------------------- */
+@mixin flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+/* ------------------ VARIABLE --------------------- */
+$bg-color: #ecf3f0;
+$wrapper-shadow: -10px 10px 20px #dbdfe2, 10px -10px 20px #fdffff;
+$btn-shadow: -5px 5px 10px #c4c7ca;
+$btn-shadow-inset: inset -5px 5px 10px #c4c7ca;
+$board-shadow-inset: inset -5px 5px 8px #d4d8db;
+
+$color: #243441;
+$border-radius: 20px;
+$setting-btn-color: #f88ab0;
+$block-size: 25px;
+$button-size: 55px;
+$game-width: 414px;
+$game-height: 736px;
+
+/* ------------------ BASE --------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body,
+.html {
+    font-family: "Krona One", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $bg-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ------------------ DARK THEME --------------------- */
+.dark {
+    $bg-color: #243441;
+    $color: #0affef;
+    $setting-btn-color: #f88ab0;
+    $wrapper-shadow: -10px 10px 20px #1f2d39;
+    $btn-shadow: -5px 5px 10px #1f2d39;
+    $btn-shadow-inset: inset -5px 5px 10px #1f2d39;
+    $board-shadow-inset: inset -5px 5px 8px #1f2d39;
+}
+
+/* ------------------ MAIN --------------------- */
+.container {
+    position: relative;
+    height: 100%;
+
+    @include flex(center, center);
+}
+
+.game-wrapper {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    max-width: $game-width;
+    height: 100%;
+    max-height: $game-height;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    box-shadow: $wrapper-shadow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */
+
+/* ------------------ --------------------- */

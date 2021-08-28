@@ -1,0 +1,64 @@
+/* ------------------ FONT --------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+/* ------------------ MIXIN --------------------- */
+/* ------------------ VARIABLE --------------------- */
+/* ------------------ BASE --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body,
+.html {
+  font-family: "Krona One", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ecf3f0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------ DARK THEME --------------------- */
+/* ------------------ MAIN --------------------- */
+.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-wrapper {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  max-width: 414px;
+  height: 100%;
+  max-height: 736px;
+  background-color: #ecf3f0;
+  border-radius: 20px;
+  box-shadow: -10px 10px 20px #dbdfe2, 10px -10px 20px #fdffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+/* ------------------ --------------------- */
+
+/*# sourceMappingURL=index.css.map */
