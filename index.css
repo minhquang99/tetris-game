@@ -9,12 +9,12 @@
   box-sizing: border-box;
 }
 
-.body,
-.html {
+body,
+html {
   font-family: "Krona One", sans-serif;
   height: 100vh;
   overflow: hidden;
-  background-color: #ecf3f0;
+  background-color: #243441;
 }
 
 a {
@@ -39,18 +39,109 @@ ul {
   position: relative;
   z-index: 99;
   width: 100%;
-  max-width: 414px;
+  max-width: 350px;
   height: 100%;
-  max-height: 736px;
-  background-color: #ecf3f0;
+  max-height: 626px;
+  background-color: #243441;
   border-radius: 20px;
-  box-shadow: -10px 10px 20px #dbdfe2, 10px -10px 20px #fdffff;
+  box-shadow: -10px 10px 20px #ca9d14, 10px -10px 20px #ca9d14;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.game-wrapper .info-section {
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  font-weight: 500;
+}
+.game-wrapper .info-section #level {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+.game-wrapper .board-section {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: auto;
+  padding: 10px;
+  box-shadow: inset -5px 5px 8px #ca9d14;
+  border-radius: 10px;
+}
+.game-wrapper .board-section .block {
+  width: 20px;
+  height: 20px;
+  border: 0.1px solid #243441;
+}
+@media only screen and (max-width: 425px) {
+  .game-wrapper .board-section .block {
+    width: 17px;
+    height: 17px;
+  }
+}
+.game-wrapper .setting-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.game-wrapper .setting-section button {
+  margin: 0 10px;
+  color: #f88ab0;
+}
+.game-wrapper .setting-section i.bxs-moon {
+  display: block;
+}
+.game-wrapper .setting-section i.bxs-sun {
+  display: none;
+}
+.game-wrapper .setting-section .btn {
+  height: 55px;
+  width: 55px;
+  border-radius: 30px;
+  box-shadow: -5px 5px 10px #ca9d14;
+  color: #243441;
+  background-color: #243441;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-wrapper .setting-section .btn:active {
+  box-shadow: inset -5px 5px 10px #ca9d14;
+}
+@media only screen and (max-width: 425px) {
+  .game-wrapper {
+    box-shadow: unset;
+    border-radius: unset;
+  }
+}
+.game-wrapper .control-section {
+  display: flex;
+}
+.game-wrapper .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.game-wrapper .col:nth-child(1) {
+  width: 60%;
+}
+.game-wrapper .col:nth-child(2) {
+  width: 40%;
+}
+.game-wrapper .col .arrow-control {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
-/* ------------------ --------------------- */
 /* ------------------ --------------------- */
 /* ------------------ --------------------- */
 /* ------------------ --------------------- */

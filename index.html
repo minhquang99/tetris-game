@@ -20,10 +20,40 @@
     <!-------------------  ---------------------!-->
     <div class="container">
         <div class="game-wrapper">
-            <div class="info-section"></div>
+            <div class="info-section">
+                <span id="level">
+                    lv1
+                </span>
+                <span id="score">
+                    34343
+                </span>
+            </div>
             <div class="board-section"></div>
-            <div class="control-section"></div>
-            <div class="setting-section"></div>
+            <div class="control-section">
+                <div class="col">
+                    <div class="arrow-control">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="btn">
+                        <i class="bx bxs-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="setting-section">
+                <button class="btn" id="btn-pause">
+                    <i class='bx bx-pause'></i>
+                </button>
+                <button class="btn" id="btn-theme">
+                    <i class='bx bxs-moon'></i>
+                    <i class='bx bxs-sun'></i>
+                </button>
+                <button class="btn" id="btn-more">
+                    <i class='bx bx-question-mark'></i>
+                </button>
+
+            </div>
         </div>
     </div>
 
@@ -31,7 +61,8 @@
 
     <!-------------------  ---------------------!-->
 
-    <!-------------------  ---------------------!-->
+    <!------------------- SCRIPT  ---------------------!-->
+    <script src="./js/game.js"></script>
 
 </body>
 

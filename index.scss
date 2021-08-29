@@ -7,20 +7,27 @@
     align-items: $align-items;
     justify-content: $justify-content;
 }
+
+@mixin mobile {
+    @media only screen and (max-width: 425px) {
+        @content;
+    }
+}
+
 /* ------------------ VARIABLE --------------------- */
-$bg-color: #ecf3f0;
-$wrapper-shadow: -10px 10px 20px #dbdfe2, 10px -10px 20px #fdffff;
-$btn-shadow: -5px 5px 10px #c4c7ca;
-$btn-shadow-inset: inset -5px 5px 10px #c4c7ca;
-$board-shadow-inset: inset -5px 5px 8px #d4d8db;
+$bg-color: #243441;
+$wrapper-shadow: -10px 10px 20px #ca9d14, 10px -10px 20px #ca9d14;
+$btn-shadow: -5px 5px 10px #ca9d14;
+$btn-shadow-inset: inset -5px 5px 10px #ca9d14;
+$board-shadow-inset: inset -5px 5px 8px #ca9d14;
 
 $color: #243441;
 $border-radius: 20px;
 $setting-btn-color: #f88ab0;
-$block-size: 25px;
+$block-size: 20px;
 $button-size: 55px;
-$game-width: 414px;
-$game-height: 736px;
+$game-width: 350px;
+$game-height: 626px;
 
 /* ------------------ BASE --------------------- */
 * {
@@ -29,8 +36,8 @@ $game-height: 736px;
     box-sizing: border-box;
 }
 
-.body,
-.html {
+body,
+html {
     font-family: "Krona One", sans-serif;
     height: 100vh;
     overflow: hidden;
@@ -78,7 +85,112 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .info-section {
+        position: relative;
+        text-align: center;
+        font-size: 22px;
+        padding: 20px;
+        font-weight: 500;
+
+        #level {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            font-size: 14px;
+        }
+    }
+
+    .board-section {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        margin: auto;
+        padding: 10px;
+        box-shadow: $board-shadow-inset;
+        border-radius: 10px;
+
+        .block {
+            width: $block-size;
+            height: $block-size;
+            border: 0.1px solid $bg-color;
+
+            @include mobile {
+                $block-size: 17px;
+
+                width: $block-size;
+                height: $block-size;
+            }
+        }
+    }
+
+    .setting-section {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+
+        button {
+            margin: 0 10px;
+            color: $setting-btn-color;
+        }
+
+        i.bxs-moon {
+            display: block;
+        }
+
+        i.bxs-sun {
+            display: none;
+        }
+
+        .btn {
+            height: $button-size;
+            width: $button-size;
+            border-radius: 30px;
+            box-shadow: $btn-shadow;
+            color: $color;
+            background-color: $bg-color;
+            border: none;
+            outline: none;
+            font-weight: 600;
+            font-size: 26px;
+            cursor: pointer;
+
+            @include flex(center, center);
+
+            &:active {
+                box-shadow: $btn-shadow-inset;
+            }
+        }
+    }
+
+    @include mobile {
+        box-shadow: unset;
+        border-radius: unset;
+    }
+
+    .control-section {
+        display: flex;
+    }
+
+    .col {
+        @include flex(center, center);
+        padding: 10px;
+
+        &:nth-child(1) {
+            width: 60%;
+        }
+
+        &:nth-child(2) {
+            width: 40%;
+        }
+
+        .arrow-control {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
+
 /* ------------------ --------------------- */
 
 /* ------------------ --------------------- */
